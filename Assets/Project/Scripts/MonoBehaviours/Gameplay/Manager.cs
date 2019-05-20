@@ -20,6 +20,9 @@ public class Manager : MonoBehaviour {
 	private static int score = 0;
 	
 	void Start() {
+		// clean highscore
+		//PlayerPrefs.SetInt(HIGH_SCORE, 0);
+		score = 0;
 		if (PlayerPrefs.HasKey(HIGH_SCORE))
 			highScore.text = "High score: " + PlayerPrefs.GetInt(HIGH_SCORE);
 		
